@@ -111,6 +111,11 @@ PRODUCT_COPY_FILES += \
     $(LOCAL_PATH)/configs/libnfc-brcm-20791b05.conf:system/etc/libnfc-brcm-20791b05.conf \
     $(LOCAL_PATH)/configs/libnfc-brcm-20791b04.conf:system/etc/libnfc-brcm-20791b04.conf \
     $(LOCAL_PATH)/configs/libnfc-brcm.conf:system/etc/libnfc-brcm.conf
+  
+# Radio
+PRODUCT_PACKAGES += \
+    libril_shim \
+    librmt_shim
 
 # Ramdisk
 PRODUCT_PACKAGES += \
@@ -120,6 +125,10 @@ PRODUCT_PACKAGES += \
     init.qcom.usb.rc \
     init.target.rc \
     ueventd.qcom.rc
+
+# Stlport
+PRODUCT_PACKAGES += \
+    libstlport
 
 # Thermal
 PRODUCT_COPY_FILES += \
