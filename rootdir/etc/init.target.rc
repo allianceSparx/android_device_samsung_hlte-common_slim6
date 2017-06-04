@@ -534,22 +534,26 @@ service qcamerasvr /system/bin/mm-qcamera-daemon
     group camera system inet input graphics radio sdcard_rw sdcard_r media_rw shell log
 
 service qseecomd /system/bin/qseecomd
-   class late_start
+   class core
    user root
-   group system
+   group root
 
 service mpdecision /system/bin/mpdecision --avg_comp
+   class main
    user root
-   group system
+   group root readproc
    disabled
 
 service thermal-engine /system/bin/thermal-engine
-   class core
+   class main
    user root
-   group radio system
+   socket thermal-send-client stream 0666 system system
+   socket thermal-recv-client stream 0660 system system
+   socket thermal-recv-passive-client stream 0666 system system
+   group root
 
 service time_daemon /system/bin/time_daemon
-   class late_start
+   class main
    user root
    group root
 
