@@ -33,6 +33,7 @@ TARGET_KERNEL_CONFIG := msm8974_sec_defconfig
 TARGET_KERNEL_SELINUX_CONFIG := selinux_defconfig
 TARGET_KERNEL_VARIANT_CONFIG := msm8974_sec_hlte_eur_defconfig
 TARGET_KERNEL_SOURCE := kernel/samsung/hlte
+TARGET_KERNEL_CROSS_COMPILE_PREFIX := arm-linux-androideabi-
 
 # Audio
 QCOM_CSDCLIENT_ENABLED := false
@@ -46,6 +47,11 @@ TARGET_PROVIDES_GPS_LOC_API := true
 # Camera
 TARGET_PROVIDES_CAMERA_HAL := true
 USE_DEVICE_SPECIFIC_CAMERA := true
+TARGET_USE_COMPAT_GRALLOC_ALIGN := true
+TARGET_HAS_LEGACY_CAMERA_HAL1 := true
+
+# Text relocations for legacy blobs
+TARGET_NEEDS_PLATFORM_TEXT_RELOCATIONS := true
 
 # CMHW
 BOARD_HARDWARE_CLASS += hardware/samsung/cmhw
@@ -74,7 +80,6 @@ TARGET_RECOVERY_FSTAB := $(LOCAL_PATH)/rootdir/etc/fstab.qcom
 
 # SELinux
 -include device/qcom/sepolicy/sepolicy.mk
-BOARD_SEPOLICY_UNION += macloader.te
 BOARD_SEPOLICY_DIRS += device/samsung/hlte-common/sepolicy
 
 # Wifi
