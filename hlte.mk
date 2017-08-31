@@ -134,8 +134,8 @@ PRODUCT_PACKAGES += \
     ueventd.qcom.rc
 
 # Stlport
-PRODUCT_PACKAGES += \
-    libstlport
+PRODUCT_COPY_FILES += \
+    $(LOCAL_PATH)/libstlport/libstlport.so:system/lib/libstlport.so
 
 # Thermal
 PRODUCT_COPY_FILES += \
