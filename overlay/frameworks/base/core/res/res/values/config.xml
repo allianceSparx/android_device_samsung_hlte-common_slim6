@@ -365,10 +365,6 @@
     <bool name="config_proximityCheckOnWake">true</bool>
     <integer name="config_proximityCheckTimeout">250</integer>
 
-    <!-- Whether device supports double tap to wake
-    <bool name="config_supportDoubleTapWake">true</bool> -->
-
-
     <!-- Whether safe headphone volume is enabled or not (country specific). -->
     <bool name="config_safe_media_volume_enabled">false</bool>
 
