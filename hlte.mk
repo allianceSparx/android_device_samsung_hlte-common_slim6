@@ -149,6 +149,8 @@ PRODUCT_PACKAGES += \
     hostapd \
     hostapd_default.conf \
     libwpa_client \
+    wcnss_service \
+    wificond \
     wpa_supplicant
 
 PRODUCT_COPY_FILES += \
