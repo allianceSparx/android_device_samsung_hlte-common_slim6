@@ -65,6 +65,10 @@ PRODUCT_COPY_FILES += \
     com.dsi.ant.antradio_library \
     libantradio
 
+# Bluetooth
+ PRODUCT_PACKAGES += \
+    libbt-vendor 
+    
 # GPS
 PRODUCT_COPY_FILES += \
     $(LOCAL_PATH)/gps/gps.conf:/system/etc/gps.conf \
