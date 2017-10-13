@@ -69,7 +69,7 @@ PRODUCT_COPY_FILES += \
     $(LOCAL_PATH)/gps/sap.conf:/system/etc/sap.conf
 
 # camera
-PRODUCT_PACKAGES += \
+# PRODUCT_PACKAGES += \
     camera.msm8974 \
     libxml2 \
     Snap 
