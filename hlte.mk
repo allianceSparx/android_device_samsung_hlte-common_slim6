@@ -61,10 +61,62 @@ PRODUCT_COPY_FILES += \
     com.dsi.ant.antradio_library \
     libantradio
 
+# Audio
+PRODUCT_PACKAGES += \
+    android.hardware.audio@2.0-impl \
+    android.hardware.audio.effect@2.0-impl \
+    audiod \
+    audio_policy.msm8974 \
+    audio.a2dp.default \
+    audio.primary.msm8974 \
+    audio.r_submix.default \
+    audio.usb.default \
+    libaudio-resampler \
+    libqcomvisualizer \
+    libqcompostprocbundle \
+    libqcomvoiceprocessing \
+    tinymix
+
 # Bluetooth
 PRODUCT_PACKAGES += \
     android.hardware.bluetooth@1.0-impl \
     libbt-vendor
+
+# DRM
+PRODUCT_PACKAGES += \
+    android.hardware.drm@1.0-impl
+
+# Display
+PRODUCT_PACKAGES += \
+    android.hardware.graphics.allocator@2.0-impl \
+    android.hardware.graphics.composer@2.1-impl \
+    android.hardware.graphics.mapper@2.0-impl \
+    android.hardware.graphics.memtrack@1.0-impl \
+    copybit.msm8974 \
+    gralloc.msm8974 \
+    hwcomposer.msm8974 \
+    memtrack.msm8974
+
+# GNSS
+PRODUCT_PACKAGES += \
+    android.hardware.gnss@1.0-impl
+    
+# Power HAL
+PRODUCT_PACKAGES += \
+    android.hardware.power@1.0-impl \
+    power.msm8974
+
+# Sensors
+PRODUCT_PACKAGES += \
+    android.hardware.sensors@1.0-impl
+
+# USB
+PRODUCT_PACKAGES += \
+    android.hardware.usb@1.0-service
+
+# Vibrator
+PRODUCT_PACKAGES += \
+    android.hardware.vibrator@1.0-impl
 
 # GPS
 PRODUCT_COPY_FILES += \
