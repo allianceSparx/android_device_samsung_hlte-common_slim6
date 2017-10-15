@@ -140,11 +140,14 @@ PRODUCT_COPY_FILES += \
     $(LOCAL_PATH)/gps/sap.conf:/system/etc/sap.conf
 
 # camera
-# PRODUCT_PACKAGES += \
+PRODUCT_PACKAGES += \
+    android.hardware.camera.provider@2.4-impl \
+    android.hardware.camera.provider@2.4-service \
+    camera.device@3.2-impl \
     camera.msm8974 \
-    libxml2 \
-    Snap 
-
+    libstlport \
+    libxml2
+    
 # HIDL
 DEVICE_MANIFEST_FILE := $(LOCAL_PATH)/manifest.xml
 
